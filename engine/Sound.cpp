@@ -1,5 +1,7 @@
 #include "Sound.h"
 
+std::list<Sound*> soundList;
+
 // Create a Sound object
 Sound::Sound() {
 
@@ -14,7 +16,7 @@ void Sound::setSoundFilePath(char *fileName) {
 int Sound::loadSoundFile(char *fileName) {
     if (!buffer->loadFromFile(filePath)) {
         loadedBuff = false;
-        std::cout << "    loadSoundFile FAILED" << std::endl;
+        std::cout << "loadSoundFile FAILED" << std::endl;
         return -1;
     }
 

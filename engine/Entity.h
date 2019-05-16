@@ -1,11 +1,7 @@
 #ifndef ENTITY_H
 #define ENTITY_H
 
-#include <SFML/Graphics.hpp>
-
 #include "Map.h"
-#include "memory.h"
-#include "Tile.h"
 
 extern unsigned int currentID;
 

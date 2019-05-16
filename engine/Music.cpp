@@ -1,5 +1,7 @@
 #include "Music.h"
 
+std::list<Music*> musicList;
+
 // Create Music object
 Music::Music() {
 
@@ -13,7 +15,7 @@ void Music::setMusicFilePath(char *fileName) {
 // Open the music file
 int Music::openMusicFile(char *fileName) {
     if (!music.openFromFile(fileName)) {
-        std::cout << "    Music::openMusicFile FAILED" << std::endl;
+        std::cout << "Music::openMusicFile FAILED" << std::endl;
         return -1;
     }
     return 1;
@@ -98,8 +100,8 @@ int getMusicStatus(int ID) {
 
 // Get Music object by ID
 Music* getMusicByID(int ID) {
-    for(std::list<Music*>::iterator it=musicList.begin(); it != musicList.end(); ++it) {
-        if((*it)->id == ID) {
+    for (std::list<Music*>::iterator it = musicList.begin(); it != musicList.end(); ++it) {
+        if ((*it)->id == ID) {
             return *it;
         }
     }

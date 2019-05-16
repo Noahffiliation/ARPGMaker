@@ -3,11 +3,9 @@
 
 #include <SFML/Graphics.hpp>
 #include <list>
-#include <vector>
+#include <memory.h>
 #include "Tile.h"
 #include "Entity.h"
-#include "Sound.h"
-#include "Music.h"
 
 class Map {
     public:

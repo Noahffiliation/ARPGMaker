@@ -7,6 +7,8 @@
 #include "Map.h"
 #include "memory.h"
 #include "collisions.h"
+#include "Sound.h"
+#include "Music.h"
 
 void init(int resX, int resY, int tileSize, char *title);
 void close();

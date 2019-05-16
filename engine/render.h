@@ -1,15 +1,12 @@
 #ifndef RENDER_H
 #define RENDER_H
 
-#include <SFML/Audio.hpp>
-#include <SFML/Graphics.hpp>
 #include <queue>
 #include <unordered_map>
 #include <string.h>
 #include <fstream>
 #include <iostream>
 
-#include "memory.h"
 #include "Map.h"
 
 extern sf::RenderWindow window;

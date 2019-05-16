@@ -1,12 +1,9 @@
 #ifndef MUSIC_H
 #define MUSIC_H
 
-#include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
 #include <iostream>
-#include "Map.h"
 #include "memory.h"
-#include "Entity.h"
 
 extern unsigned int currentID;
 
@@ -40,5 +37,4 @@ Music* getMusicByID(int ID);
 
 #else
 class Music;
-std::list<Music*> musicList;
 #endif

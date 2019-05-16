@@ -1,10 +1,6 @@
 #ifndef TILE_H
 #define TILE_H
 
-#include <stack>
-#include <list>
-#include "Entity.h"
-
 class Tile {
     public:
         Tile(int size, unsigned int ID);

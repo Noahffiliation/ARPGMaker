@@ -1,5 +1,7 @@
 #include "Map.h"
 
+Map demoMap;
+
 // Create a Map object
 Map::Map(int tileSize, int tileX, int tileY) {
     this->tileSize = tileSize;
@@ -66,4 +68,3 @@ void createMap(int tileSize, int tileX, int tileY) {
     demoMap = *map;
 }
 
-Map demoMap;

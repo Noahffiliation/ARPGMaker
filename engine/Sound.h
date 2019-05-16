@@ -1,12 +1,9 @@
 #ifndef SOUND_H
 #define SOUND_H
 
-#include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
 #include <iostream>
-#include "Map.h"
 #include "memory.h"
-#include "Entity.h"
 
 extern unsigned int currentID;
 
@@ -46,5 +43,4 @@ Sound* getSoundByID(int ID);
 
 #else
 class Sound;
-std::list<Sound*> soundList;
 #endif
