@@ -3,7 +3,7 @@
 
 #include "Map.h"
 
-// Store global data structures and do memory management
+// Store global data structures
 extern unsigned int currentID;
 extern Map demoMap;
 

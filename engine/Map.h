@@ -11,7 +11,7 @@
 
 class Map {
     public:
-        Map(int tileSize = 0, int tileX = 0, int tileY = 0);//Initialize a map
+        Map(int tileSize = 0, int tileX = 0, int tileY = 0);
         void addEntity(Entity* entity);
         void addEntity(Entity* entity, Tile* tile);
         void removeEntity(Entity* entity);
@@ -21,7 +21,7 @@ class Map {
 
         std::vector<Tile*> tileList;
         std::list<Entity*> entityList;
-        int tileSize;//Size in pixels of a tile in the map
+        int tileSize;
         int tileX;
         int tileY;
         char *background;

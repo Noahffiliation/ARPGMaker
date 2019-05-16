@@ -1,6 +1,4 @@
 #include <Python.h>
-#include <SFML/Graphics.hpp>
-#include <SFML/Audio.hpp>
 
 #include "engine/main.h"
 
@@ -489,7 +487,6 @@ static struct PyModuleDef ARPGMakermodule = {
     ARPGMakerMethods
 };
 
-PyMODINIT_FUNC
-PyInit_ARPGMaker(void) {
+PyMODINIT_FUNC PyInit_ARPGMaker() {
     return PyModule_Create(&ARPGMakermodule);
 }

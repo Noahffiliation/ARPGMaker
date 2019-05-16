@@ -7,7 +7,6 @@
 #include "memory.h"
 #include "Tile.h"
 
-// Map g_tmap;
 extern unsigned int currentID;
 
 class Entity {

@@ -1,13 +1,12 @@
 #ifndef MUSIC_H
 #define MUSIC_H
 
-// Console command to compile for debugging:
-// g++ Music.cpp -lsfml-graphics -lsfml-window -lsfml-system -I/usr/include/SFML/ -lsfml-audio -lsfml-network
-
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
+#include <iostream>
 #include "Map.h"
 #include "memory.h"
+#include "Entity.h"
 
 extern unsigned int currentID;
 
@@ -23,9 +22,6 @@ class Music {
         void setMusicVolume(unsigned int vol);
         void setMusicPitch(double pitch);
         int getMusicStatus(int ID);
-
-        // Used for DEBUGGING
-        //int main();
 
         int id;
         char *filePath;

@@ -1,5 +1,3 @@
-GAME = alec_demo.py
-
 .PHONY: build clean
 
 build:
@@ -7,6 +5,3 @@ build:
 
 clean:
 	rm -f ARPGMaker.so;
-
-run:
-	python3.7 $(GAME)

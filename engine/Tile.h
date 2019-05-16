@@ -10,7 +10,6 @@ class Tile {
         Tile(int size, unsigned int ID);
         void setTexture(char *filePath);
         void setTypeID(unsigned int typeID);
-    // private:
         int size;
         unsigned int ID;
         unsigned int typeID;

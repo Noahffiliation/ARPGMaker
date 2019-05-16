@@ -1,13 +1,12 @@
 #ifndef SOUND_H
 #define SOUND_H
 
-// Console command to compile for debugging:
-// g++ Sound.cpp -lsfml-graphics -lsfml-window -lsfml-system -I/usr/include/SFML/ -lsfml-audio -lsfml-network
-
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
+#include <iostream>
 #include "Map.h"
 #include "memory.h"
+#include "Entity.h"
 
 extern unsigned int currentID;
 
@@ -26,9 +25,6 @@ class Sound {
         sf::SoundBuffer* getBuffer();
         int loadedBuffer();
         int getSoundStatus();
-
-        // Used for DEBUGGING
-        //int main();
 
         int id;
         char *filePath;
