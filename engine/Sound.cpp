@@ -48,11 +48,7 @@ void Sound::stopSound() {
 
 // Set the Sound's loop
 void Sound::setSoundLoop(int setting) {
-    if (setting == 1){
-        sound.setLoop(true);
-    } else {
-        sound.setLoop(false);
-    }
+    sound.setLoop(setting);
 }
 
 // Set the Sound's volume
@@ -72,8 +68,7 @@ sf::SoundBuffer* Sound::getBuffer() {
 
 // Check if the buffer is loaded
 int Sound::loadedBuffer() {
-    if (loadedBuff) return 1;
-    else return 0;
+    return loadedBuff;
 }
 
 // Get the Sound's status
@@ -87,11 +82,13 @@ int createSound(char *fileName, int giveBuffer) {
     sound->id = currentID;
     sound->setSoundFilePath(fileName);
     soundList.push_front(sound);
+
     if (giveBuffer > 0) {
         sound->loadSoundFile(fileName);
     } else {
         sound->loadedBuff = false;
     }
+
     return currentID++;
 }
 
@@ -129,11 +126,12 @@ int getSoundStatus(int ID) {
 
 // Get Sound by ID
 Sound* getSoundByID(int ID) {
-    for(std::list<Sound*>::iterator it=soundList.begin(); it != soundList.end(); ++it) {
+    for (std::list<Sound*>::iterator it = soundList.begin(); it != soundList.end(); ++it) {
         if((*it)->id == ID) {
             return *it;
         }
     }
+    
     std::cout << "FAILED TO FIND REQUESTED ID" << std::endl;
     return NULL;
 }

@@ -12,9 +12,8 @@ bool circleCollide(Entity *ent1, Entity *ent2) {
     sf::Vector2u vec1 = tex1.getSize();
     sf::Vector2u vec2 = tex2.getSize();
     // Calculate distance between entities
-    float distance = sqrt(pow(ent2->x + (vec2.x / 2) - 
-                    (ent1->x + (vec1.y / 2)), 2) + pow(ent2->y + (vec2.y / 2) - 
-                    (ent1->y + (vec1.y / 2)), 2));
+    float distance = sqrt(pow(ent2->x + (vec2.x / 2) - (ent1->x + (vec1.y / 2)), 2) + 
+                          pow(ent2->y + (vec2.y / 2) - (ent1->y + (vec1.y / 2)), 2));
     return distance < (ent1->radius + ent2->radius);
 }
 

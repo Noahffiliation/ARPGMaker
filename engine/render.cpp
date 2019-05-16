@@ -20,6 +20,7 @@ void loadTexture(char *filePath) {
         std::cout << "Error: Couldn't load file " << filePath << std::endl;
         return;
     }
+
     textureHash[filePath] = tex;
 }
 
@@ -70,9 +71,7 @@ void renderEntity(unsigned int id) {
 // Attach each Entity's texture to a Sprite, set their positions, and add them to draw buffer
 void renderEntities() {
     for (std::list<Entity*>::iterator it = demoMap.entityList.begin(); it != demoMap.entityList.end(); ++it) {
-        sf::Sprite *entity = new sf::Sprite(textureHash[(*it)->texture]);
-        entity->setPosition((*it)->x, (*it)->y);
-        buffer.push(entity);
+        renderEntity((*it)->id);
     }
 }
 

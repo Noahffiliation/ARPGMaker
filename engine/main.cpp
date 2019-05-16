@@ -26,8 +26,7 @@ void systemEventHandler() {
     sf::Event event;
     while (window.pollEvent(event)) {
         // Close the game with ESC key
-        if(event.type == sf::Event::Closed || ((event.type == sf::Event::KeyPressed)
-           && event.key.code == sf::Keyboard::Escape))
+        if (event.type == sf::Event::Closed || ((event.type == sf::Event::KeyPressed) && event.key.code == sf::Keyboard::Escape))
             close();
     }
 }

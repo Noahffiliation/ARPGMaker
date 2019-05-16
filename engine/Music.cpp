@@ -38,11 +38,7 @@ void Music::stopMusic() {
 
 // Set the Music to loop
 void Music::setMusicLoop(int setting) {
-    if (setting == 1) {
-        music.setLoop(true);
-    } else {
-        music.setLoop(false);
-    }
+    music.setLoop(setting);
 }
 
 // Set a Music's volume
@@ -91,7 +87,7 @@ void setMusicVolume(int ID, unsigned int vol) {
 }
 
 void setMusicPitch(int ID, int pitch) {
-    getMusicByID(ID)->setMusicPitch(pitch/100.0);
+    getMusicByID(ID)->setMusicPitch(pitch / 100.0);
 }
 
 int getMusicStatus(int ID) {
@@ -105,6 +101,7 @@ Music* getMusicByID(int ID) {
             return *it;
         }
     }
+    
     std::cout << "FAILED TO FIND REQUESTED ID" << std::endl;
     return NULL;
 }
