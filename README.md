@@ -1,9 +1,15 @@
 # ARPGMaker
 ARPGMaker is a Python module that provides functionality for creating 2D action games using a custom C++ engine with subsystems, including audio and tile mapping.
 
-## Build and Run
-NOTE: Requires Python 3.7 and SFML
+## Requirements
+- [Python 3.7](https://www.python.org/downloads/) and `python3.7-dev`
+- [SFML](https://www.sfml-dev.org/tutorials/2.5)
+- `python3-distutils`
+```
+sudo apt-get install python3-distutils
+```
 
+## Build and Run
 Build the ARPGMaker module:
 ```
 $ make build
