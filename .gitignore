@@ -2,6 +2,6 @@
 *.so
 build
 ARPGMaker
-a.out
+*.out
 *.swp
 __pycache__/
