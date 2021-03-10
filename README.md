@@ -31,11 +31,11 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 What things you need to install the software and how to install them.
 
-- [Python 3.7](https://www.python.org/downloads/) and `python3.7-dev`
+- [Python 3.9](https://www.python.org/downloads/) and `python3.9-dev`
 - [SFML](https://www.sfml-dev.org/tutorials/2.5)
 - `python3-distutils`
 ```
-$ sudo apt-get install python3.7 python3.7-dev libsfml-dev python3-distutils
+$ sudo apt-get install python3.9 python3.9-dev libsfml-dev python3-distutils
 ```
 
 ## Usage <a name="usage"></a>
