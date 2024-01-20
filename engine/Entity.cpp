@@ -15,6 +15,10 @@ Entity::Entity(int posx, int posy, bool colCircle, int radius) {
     demoMap.addEntity(this);
 }
 
+Entity::~Entity() {
+    free(this);
+}
+
 // Associate an Entity with a texture
 void Entity::setTexture(char *texturePath) {
     texture = texturePath;

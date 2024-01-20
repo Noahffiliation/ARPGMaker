@@ -2,16 +2,16 @@
 
 <div align="center">
 
-  [![Status](https://img.shields.io/badge/status-active-success.svg)]() 
+  [![Status](https://img.shields.io/badge/status-active-success.svg)]()
   [![GitHub Issues](https://img.shields.io/github/issues/Noahffiliation/ARPGMaker.svg)](https://github.com/Noahffiliation/ARPGMaker/issues)
   [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/Noahffiliation/ARPGMaker.svg)](https://github.com/oahffiliation/ARPGMaker/pulls)
-  
+
 </div>
 
 ---
 
 <p align="center"> ARPGMaker is a Python module that provides functionality for creating 2D action games using a custom C++ engine.
-    <br> 
+    <br>
 </p>
 
 ## Table of Contents
@@ -31,11 +31,11 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 What things you need to install the software and how to install them.
 
-- [Python 3.9](https://www.python.org/downloads/) and `python3.9-dev`
+- [Python3](https://www.python.org/downloads/) and `python3-dev`
 - [SFML](https://www.sfml-dev.org/tutorials/2.5)
 - `python3-distutils`
 ```
-$ sudo apt-get install python3.9 python3.9-dev libsfml-dev python3-distutils
+$ sudo apt-get install make gcc g++ python3 python3-dev libsfml-dev python3-distutils
 ```
 
 ## Usage <a name="usage"></a>

@@ -10,6 +10,9 @@ extern unsigned int currentID;
 class Sound {
     public:
         Sound();
+        ~Sound() {
+            free(buffer);
+        }
         void setSoundFilePath(char *fileName);
         int loadSoundFile(char *fileName);
         void setBuffer(sf::SoundBuffer *buffer);

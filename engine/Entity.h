@@ -8,12 +8,13 @@ extern unsigned int currentID;
 class Entity {
     public:
         Entity(int posx, int posy, bool colCircle, int radius);
+        ~Entity();
         void setTexture(char *texturePath);
         void setPosition(int posx, int posy);
         void setTile(Tile* tile);
         void move(int movex, int movey);
         void movef(int numx, int denx, int numy, int deny);
-        
+
         Tile* tile;
         friend class Map;
         float x;
