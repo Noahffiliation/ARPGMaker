@@ -11,7 +11,7 @@ class Sound {
     public:
         Sound();
         ~Sound() {
-            free(buffer);
+            delete buffer;
         }
         void setSoundFilePath(char *fileName);
         int loadSoundFile(char *fileName);
