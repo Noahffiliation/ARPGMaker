@@ -81,6 +81,7 @@ jobs:
     - if: matrix.build-mode == 'manual'
       shell: bash
       run: |
+        sudo apt-get install libsfml-dev
         make build
 
     - name: Perform CodeQL Analysis
