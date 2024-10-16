@@ -25,9 +25,8 @@ What things you need to install the software and how to install them.
 
 - [Python](https://www.python.org/downloads/) and `python3-dev`
 - [SFML](https://www.sfml-dev.org/tutorials/2.5)
-- `python3-distutils`
 ```
-sudo apt-get install make gcc g++ python3 python3-dev libsfml-dev python3-distutils
+sudo apt-get install make gcc g++ python3 python3-dev libsfml-dev
 ```
 
 ## Usage <a name="usage"></a>
