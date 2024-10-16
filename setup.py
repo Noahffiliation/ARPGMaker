@@ -1,4 +1,4 @@
-from distutils.core import setup, Extension
+from setuptools import setup, Extension
 
 # Compile and link all parts together
 module = Extension('ARPGMaker',
@@ -10,7 +10,7 @@ module = Extension('ARPGMaker',
                    language = 'c++')
 
 # Build module
-setup(name = 'ARPGMaker', 
+setup(name = 'ARPGMaker',
       version = '1.0',
       description = 'This is the ARPGMaker package',
       ext_modules = [module])
