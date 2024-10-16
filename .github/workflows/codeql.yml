@@ -75,7 +75,7 @@ jobs:
     #   modify them (or add more) to build your code if your project, please refer to the EXAMPLE below for guidance.
 
     - run: |
-        sudo apt-get install make gcc g++ python3 python3-dev libsfml-dev python3-distutils
+        sudo apt-get install make gcc g++ python3 python3-dev libsfml-dev
         touch extend.cpp; rm -f ARPGMaker.cpython-310-x86_64-linux-gnu.so; python3 setup.py build; mv build/lib.linux-x86_64-3.10/ARPGMaker.cpython-310-x86_64-linux-gnu.so .; mv ARPGMaker.cpython-310-x86_64-linux-gnu.so ARPGMaker.so; cp ARPGMaker.so demos/ARPGMaker.so
 
     - name: Perform CodeQL Analysis
