@@ -5,3 +5,4 @@ ARPGMaker
 *.out
 *.swp
 __pycache__/
+.venv
