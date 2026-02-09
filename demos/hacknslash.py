@@ -1,6 +1,8 @@
 import ARPGMaker
 import time
-import random
+import secrets
+
+rng = secrets.SystemRandom()
 
 import draw
 
@@ -40,9 +42,9 @@ while ARPGMaker.isOpen():
 
     if spawn_time is None or time.time() - spawn_time > 1:
         spawn_time = time.time()
-        dirx = random.randint(15, 300)
-        diry = random.randint(15, 300)
-        e1 = Enemy(ARPGMaker.createEntity(random.randint(0, width - enemy_radius), random.randint(0, enemy_radius), enemy_radius), dirx, diry)
+        dirx = rng.randint(15, 300)
+        diry = rng.randint(15, 300)
+        e1 = Enemy(ARPGMaker.createEntity(rng.randint(0, width - enemy_radius), rng.randint(0, enemy_radius), enemy_radius), dirx, diry)
         ARPGMaker.setTexture(e1.id, "assets/enemy.png")
         enemy_list.append(e1)
 
