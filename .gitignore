@@ -8,3 +8,7 @@ __pycache__/
 .venv
 *.gcov
 .pytest_cache
+*_coverage.xml
+.coverage
+.coverage.*
+coverage.xml

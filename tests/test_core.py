@@ -11,6 +11,11 @@ TITLE = "Test Window"
 @pytest.fixture(scope="module", autouse=True)
 def init_engine():
     """Initialize the engine once for the entire test session."""
+    # Check for headless environment
+    if os.environ.get("GITHUB_ACTIONS") == "true" and not os.environ.get("DISPLAY"):
+        pytest.skip("Skipping engine initialization in headless CI environment without DISPLAY")
+        return
+
     try:
         # ARPGMaker.init(RES_X, RES_Y, TILE_SIZE, TITLE) # This opens a window, might fail in headless
         # If init is required for other functions to work (like initializing demoMap), we MUST run it.

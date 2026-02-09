@@ -19,7 +19,7 @@ jobs:
       - name: Install Dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y libsfml-dev python3-dev gcovr
+          sudo apt-get install -y libsfml-dev python3-dev gcovr xvfb
           pip install pytest pytest-cov
 
       - name: Build with Coverage
@@ -36,7 +36,7 @@ jobs:
           # The user didn't ask me to commit, just to write files.
           # GitHub Actions check out the repo. If pytest.ini is not in the repo, pytest might fail if I don't set pythonpath.
           # Use PYTHONPATH=. just to be safe.
-          PYTHONPATH=. pytest --cov=. --cov-report=xml:coverage.xml tests/
+          PYTHONPATH=. xvfb-run --auto-servernum pytest --cov=. --cov-report=xml:coverage.xml tests/
 
       - name: Generate C++ Coverage
         run: |
