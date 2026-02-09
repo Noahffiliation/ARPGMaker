@@ -1,0 +1,52 @@
+name: Build
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    types: [opened, synchronize, reopened]
+permissions:
+  contents: read
+jobs:
+  sonarqube:
+    name: SonarQube
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libsfml-dev python3-dev gcovr
+          pip install pytest pytest-cov
+
+      - name: Build with Coverage
+        env:
+          CFLAGS: "-fprofile-arcs -ftest-coverage"
+          LDFLAGS: "-lgcov"
+        run: |
+          python3 setup.py build_ext --inplace
+
+      - name: Run Tests and Generate Python Coverage
+        run: |
+          # Create a pytest.ini if it doesn't exist in the repo yet, or rely on the one I created?
+          # The one I created is local. The repo might not have it unless I committed it.
+          # The user didn't ask me to commit, just to write files.
+          # GitHub Actions check out the repo. If pytest.ini is not in the repo, pytest might fail if I don't set pythonpath.
+          # Use PYTHONPATH=. just to be safe.
+          PYTHONPATH=. pytest --cov=. --cov-report=xml:coverage.xml tests/
+
+      - name: Generate C++ Coverage
+        run: |
+          gcovr -r . --xml -o cpp_coverage.xml
+
+      - name: SonarQube Scan
+        uses: SonarSource/sonarqube-scan-action@a31c9398be7ace6bbfaf30c0bd5d415f843d45e9
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        with:
+          args: >
+            -Dsonar.python.coverage.reportPaths=coverage.xml
+            -Dsonar.cfamily.cobertura.reportPaths=cpp_coverage.xml

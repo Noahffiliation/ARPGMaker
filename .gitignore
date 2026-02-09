@@ -6,3 +6,5 @@ ARPGMaker
 *.swp
 __pycache__/
 .venv
+*.gcov
+.pytest_cache
