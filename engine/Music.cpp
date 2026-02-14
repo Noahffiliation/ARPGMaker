@@ -23,17 +23,17 @@ int Music::openMusicFile(char *fileName) {
 
 // Play the Music
 void Music::playMusic() {
-    music.play();   
+    music.play();
 }
 
 // Pause the Music
 void Music::pauseMusic() {
-    music.pause();   
+    music.pause();
 }
 
 // Stop the Music
 void Music::stopMusic() {
-    music.stop();   
+    music.stop();
 }
 
 // Set the Music to loop
@@ -101,7 +101,7 @@ Music* getMusicByID(int ID) {
             return *it;
         }
     }
-    
+
     std::cout << "FAILED TO FIND REQUESTED ID" << std::endl;
     return NULL;
 }

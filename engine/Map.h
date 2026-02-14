@@ -9,7 +9,7 @@
 
 class Map {
     public:
-        explicit Map(int tileSize = 0, int tileX = 0, int tileY = 0);
+        Map(int tileSize = 0, int tileX = 0, int tileY = 0);
         void addEntity(Entity* entity);
         void addEntity(Entity* entity, Tile* tile);
         void removeEntity(Entity* entity);

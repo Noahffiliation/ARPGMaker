@@ -38,7 +38,7 @@ void Sound::playSound() {
 
 // Pause the Sound object
 void Sound::pauseSound() {
-    sound.pause();   
+    sound.pause();
 }
 
 // Stop the Sound object
@@ -131,7 +131,7 @@ Sound* getSoundByID(int ID) {
             return *it;
         }
     }
-    
+
     std::cout << "FAILED TO FIND REQUESTED ID" << std::endl;
     return NULL;
 }

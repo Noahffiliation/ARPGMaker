@@ -73,7 +73,7 @@ def pikachuPress(i):
         return 1
     elif ( ARPGMaker.getSoundStatus(enemySounds[i]) == 0 ):
         return 0
-    
+
 
 while ARPGMaker.isOpen():
     ARPGMaker.systemEventHandler()
@@ -107,7 +107,7 @@ while ARPGMaker.isOpen():
                 enemyVolumes[i] += 10
                 ARPGMaker.setSoundVolume(enemySounds[i],enemyVolumes[i])
                 ARPGMaker.playSound(ub)
-    
+
     if ( ARPGMaker.circleCollide(player1,musicButton) and ARPGMaker.isKeyPressed('P') == 1 ):
         if ( ARPGMaker.getMusicStatus(bgMusic) == 0 or ARPGMaker.getMusicStatus(bgMusic) == 1 ):
             ARPGMaker.playMusic(bgMusic)

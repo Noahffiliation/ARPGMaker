@@ -16,7 +16,7 @@ void close() {
     window.close();
 }
 
-// Check if the window is open
+// CHeck if the window is open
 bool isOpen() {
     return window.isOpen();
 }
